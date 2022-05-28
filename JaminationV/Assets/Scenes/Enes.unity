@@ -266,6 +266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowRange: 10
   circle: {fileID: 129053026}
+  skillDuration: 5
+  skillCoolDown: 0.5
 --- !u!95 &57532681
 Animator:
   serializedVersion: 3
@@ -563,7 +565,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73962b3ec77a779458c71f18e6c1a85a, type: 2}
+  - {fileID: 2100000, guid: bc4865d3db163c241a524281f50422fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -661,6 +663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 0.82
+  enemySlowDuration: 5
+  fallowRange: 10
+  hitRange: 2.5
 --- !u!65 &659368830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -693,7 +698,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73962b3ec77a779458c71f18e6c1a85a, type: 2}
+  - {fileID: 2100000, guid: bc4865d3db163c241a524281f50422fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

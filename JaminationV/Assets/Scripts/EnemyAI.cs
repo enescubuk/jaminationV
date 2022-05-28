@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
     GameObject humanPlayer;
     public float enemySlowDuration;
     private Animator enemyAnim;
+    public float fallowRange;
+    public float hitRange;
     void Awake()
     {
         enemyAnim = GetComponent<Animator>();
@@ -33,7 +35,13 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        fallowPlayer();
+        if (Vector3.Distance(transform.position,humanPlayer.transform.position) <= fallowRange)
+        {
+            if (Vector3.Distance(transform.position,humanPlayer.transform.position) >= hitRange)
+            {
+                fallowPlayer();
+            }
+        }
     }
     void fallowPlayer()
     {
