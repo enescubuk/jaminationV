@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         enemyAnim = GetComponent<Animator>();
-        humanPlayer = GameObject.Find("Human");
+        humanPlayer = GameObject.Find("Player");
         
     }
     void Start()
