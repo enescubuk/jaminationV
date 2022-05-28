@@ -6,19 +6,31 @@ public class DoorTrigger : MonoBehaviour
 {
     [SerializeField]
     GameObject door;
+
     bool isOpened = false;
-    public Animator anim => door.GetComponent<Animator>() ; 
+    bool onedoor;
+    bool twodoor;
+    int count;
+   
     
-     
+
+
+
+
+
+
 
     void OnTriggerEnter(Collider col)
     {
-        if (!isOpened)
-        {
-            isOpened = true;
-            anim.SetTrigger("open");
-            //door.transform.position += new Vector3(0, 4, 0);
-        }
+        door.GetComponent<DoorScript>().count++;
+
+
+           
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        door.GetComponent<DoorScript>().count--;
     }
 
 

@@ -25,8 +25,8 @@ public class hareket : MonoBehaviour
         float yatay = Input.GetAxis("Vertical");
 
         float dikey = Input.GetAxis("Horizontal");
-        Vector3 hareket = new Vector3(yatay * Hiz, 0.0f, dikey * Hiz);
+        Vector3 hareket = new Vector3(dikey * Hiz, 0.0f, yatay * Hiz);
         rb.AddForce(hareket);//force güç ekle demek
     }
-
+                                                                                                        
 }
