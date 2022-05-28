@@ -6,6 +6,10 @@ public class slowMech : MonoBehaviour
 {
     public float slowRange;
     public GameObject circle;
+
+    public float skillDuration , skillCoolDown;
+
+    Vector2 firstScale;
     // Start is called before the first frame update
     void Awake()
     {
@@ -13,7 +17,7 @@ public class slowMech : MonoBehaviour
     }
     void Start()
     {
-        
+        firstScale = circle.transform.localScale;
     }
 
     // Update is called once per frame
@@ -32,15 +36,14 @@ public class slowMech : MonoBehaviour
     }
     IEnumerator coolDown()
     {
-        Debug.Log("dalga açti");
-        yield return new WaitForSecondsRealtime(0.5f);
-        Debug.Log("kapandi");
-        circle.transform.localScale = new Vector2(0.5f,0.5f);
-        Debug.Log("bitti");
+        //dalga açtı
+        yield return new WaitForSecondsRealtime(skillDuration);
+        circle.transform.localScale = firstScale;
+        //dalga kapandı
         
-        
+
         Debug.Log("5 saniye cooldown başladi");
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(skillCoolDown - skillDuration);
         Debug.Log("cooldown bitti");
     }
 }
