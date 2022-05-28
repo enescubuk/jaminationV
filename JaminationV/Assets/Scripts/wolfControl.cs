@@ -7,12 +7,14 @@ public class wolfControl : MonoBehaviour
     public float speed = 5f;
     private Vector3 forward;
     private Vector3 right;
+    private Animator wolfAnimator;
     void Start()
     {
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+        wolfAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class wolfControl : MonoBehaviour
         {
             Move();
         }
+        animationController();
     }
 
     void Move()
@@ -34,5 +37,10 @@ public class wolfControl : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
+    }
+
+    void animationController()
+    {
+        
     }
 }

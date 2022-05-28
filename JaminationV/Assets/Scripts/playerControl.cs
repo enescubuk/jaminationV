@@ -9,6 +9,7 @@ public class playerControl : MonoBehaviour
     private BoxCollider _collider;
     private Vector3 forward;
     private Vector3 right;
+    private Animator playerAnim;
     void Start()
     {
         _collider = GetComponent<BoxCollider>();
@@ -16,6 +17,7 @@ public class playerControl : MonoBehaviour
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+        playerAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class playerControl : MonoBehaviour
         {
             Move();
         }
+        animationController();
     }
 
     void Move()
@@ -45,5 +48,10 @@ public class playerControl : MonoBehaviour
         {
             other.isTrigger = true;
         }
+    }
+
+    void animationController()
+    {
+        
     }
 }
