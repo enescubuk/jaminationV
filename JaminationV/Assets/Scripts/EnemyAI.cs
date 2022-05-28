@@ -11,6 +11,10 @@ public class EnemyAI : MonoBehaviour
     private Animator enemyAnim;
     public float fallowRange;
     public float hitRange;
+    public float enemyDamage;
+
+
+    int counter = 0;
     void Awake()
     {
         enemyAnim = GetComponent<Animator>();
@@ -19,17 +23,6 @@ public class EnemyAI : MonoBehaviour
     }
     void Start()
     {
-        if (this.gameObject.name == "Enemy1")
-        {
-            //speed = x;
-            //enemySpeed = 0.1f
-        }
-        if (this.gameObject.name == "Enemy2")
-        {
-            //speed = x / 2;
-            //enemySpeed = 0.1f / 2;
-        }
-
         firstEnemySpeed = enemySpeed;
     }
 
@@ -40,7 +33,25 @@ public class EnemyAI : MonoBehaviour
             if (Vector3.Distance(transform.position,humanPlayer.transform.position) >= hitRange)
             {
                 fallowPlayer();
+                Debug.Log("ustune kosuyor");
+                enemyAnim.SetBool("enemywalk",true);
+                
             }
+            else
+            {
+                
+                Debug.Log("saldiriyor");
+                enemyAnim.SetBool("enemywalk",false);
+                enemyAnim.SetTrigger("enemyhit");
+                Debug.Log("zinkkk");
+                
+            }
+            
+        }
+        else
+        {
+            Debug.Log("kosmuyor");
+            enemyAnim.SetBool("enemywalk",false);
         }
     }
     void fallowPlayer()
@@ -65,5 +76,10 @@ public class EnemyAI : MonoBehaviour
         
         this.enemySpeed = firstEnemySpeed;
         enemyAnim.SetFloat("walkAnimSpeed",1f);
+    }
+
+    public void damage()
+    {
+
     }
 }
