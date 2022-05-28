@@ -7,7 +7,8 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField]
     GameObject door;
     bool isOpened = false;
-
+    public Animator anim => door.GetComponent<Animator>() ; 
+    
      
 
     void OnTriggerEnter(Collider col)
@@ -15,7 +16,8 @@ public class DoorTrigger : MonoBehaviour
         if (!isOpened)
         {
             isOpened = true;
-            door.transform.position += new Vector3(0, 4, 0);
+            anim.SetTrigger("open");
+            //door.transform.position += new Vector3(0, 4, 0);
         }
     }
 

@@ -22,9 +22,9 @@ public class hareket : MonoBehaviour
     void Update()
     {
 
-        float yatay = Input.GetAxis("Horizontal");
+        float yatay = Input.GetAxis("Vertical");
 
-        float dikey = Input.GetAxis("Vertical");
+        float dikey = Input.GetAxis("Horizontal");
         Vector3 hareket = new Vector3(yatay * Hiz, 0.0f, dikey * Hiz);
         rb.AddForce(hareket);//force güç ekle demek
     }
