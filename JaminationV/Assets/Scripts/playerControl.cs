@@ -27,6 +27,8 @@ public class playerControl : MonoBehaviour
             Move();
         }
         animationController();
+        HandleRotationInput();
+        HandleShootInput();
     }
 
     void Move()
@@ -50,8 +52,26 @@ public class playerControl : MonoBehaviour
         }
     }
 
+    void HandleRotationInput()
+    {
+        RaycastHit _hit;
+        Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(_ray,out _hit))
+        {
+            transform.LookAt(new Vector3(_hit.point.x,transform.position.y,_hit.point.z));
+        }
+    }
     void animationController()
     {
         
+    }
+
+    void HandleShootInput()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            PlayerGun.Instance.Shoot();
+        }
     }
 }
