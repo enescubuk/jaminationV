@@ -1,17 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerControl : MonoBehaviour
+public class wolfControl : MonoBehaviour
 {
     public float speed = 5f;
-    private BoxCollider _collider;
     private Vector3 forward;
     private Vector3 right;
     void Start()
     {
-        _collider = GetComponent<BoxCollider>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -37,13 +34,5 @@ public class playerControl : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Door")
-        {
-            other.isTrigger = true;
-        }
     }
 }
