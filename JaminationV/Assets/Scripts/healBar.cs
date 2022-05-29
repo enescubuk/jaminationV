@@ -49,6 +49,7 @@ public class healBar : MonoBehaviour
             eskimo1.SetActive(false);
             eskimo2.SetActive(false);
             eskimo3.SetActive(false);
+            SceneManager.LoadScene("credits");
             Debug.Log("adam öldü");
             Time.timeScale = 0;
             if (Input.GetKeyDown(KeyCode.R))

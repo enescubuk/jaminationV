@@ -7,7 +7,7 @@ public class ui : MonoBehaviour
 { 
     public void startButton()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Polish");
     }
     public void quitButton()
     {
