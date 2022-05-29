@@ -5,9 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Vector3 firingPoint;
+    
 
     [SerializeField] private float projectileSpeed;
-    [SerializeField] private float maxProjectileDistance;
     void Start()
     {
         firingPoint = transform.position;
@@ -20,6 +20,6 @@ public class Projectile : MonoBehaviour
 
     void MoveProjectile()
     {
-        transform.Translate(Vector3.left * projectileSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * projectileSpeed* Time.deltaTime);
     }
 }
