@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerGun : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class PlayerGun : MonoBehaviour
     private float lastShotTime = 0;
     
     public static PlayerGun Instance;
-    
-    
+    public Slider reloadSlider;
+    private float totalTime=0;
+    private float currentVelocity = 0;
+    private float score;
+    private float currentScore;
+    private bool reloadControl;
     void Awake()
     {
         Instance = GetComponent<PlayerGun>();
@@ -19,16 +24,34 @@ public class PlayerGun : MonoBehaviour
 
     void Update()
     {
-        
+        if (reloadControl)
+        {
+            currentScore = Mathf.SmoothDamp(reloadSlider.value, reloadSlider.maxValue, ref currentVelocity, 100 * Time.deltaTime);
+            reloadSlider.value = currentScore;
+        }
+
+        if (reloadSlider.value >= (reloadSlider.maxValue)-1)
+        {
+            reloadControl = false;
+            reloadSlider.value = reloadSlider.minValue;
+            Debug.Log("sıfırlandı");
+        }
     }
 
     public void Shoot()
     {
-        if (lastShotTime + firingSpeed <= Time.time)
+        if (reloadControl == false)
         {
-            lastShotTime = Time.time;
-            Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
+            if (lastShotTime + firingSpeed <= Time.time)
+            {
+                lastShotTime = Time.time;
+                Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
+                reloadControl = true;
+            }
         }
+       
         
     }
+
+    
 }
