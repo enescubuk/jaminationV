@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Polish.unity
     guid: 1818e25554c719d4c85455eb5a41c265
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: c28de16cf48e8964da740eaca4b34f8f
   m_configObjects: {}
