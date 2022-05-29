@@ -64,7 +64,16 @@ public class playerControl : MonoBehaviour
     }
     void animationController()
     {
-        
+        bool isWalk;
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+        {
+            isWalk = false;
+        }
+        else
+        {
+            isWalk = true;
+        }
+        playerAnim.SetBool("humanWalk",isWalk);
     }
 
     void HandleShootInput()
