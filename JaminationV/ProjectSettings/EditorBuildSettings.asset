@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Emir.unity
-    guid: 804fb6fa344df4748bf1b5fc39937948
+    path: Assets/Scenes/Polish.unity
+    guid: 1818e25554c719d4c85455eb5a41c265
   m_configObjects: {}

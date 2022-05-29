@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8024811531827154347
+--- !u!114 &-7587931978869722862
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Texture
+  m_Name: m_wall_DefaultMaterial_AlbedoTransparency.1001
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 41a39a165adb7a74190f2fe6b7c33852, type: 3}
+        m_Texture: {fileID: 2800000, guid: 35c3ec3e3d60fdd4ab00c7972c6dcc09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 783ccc2c0816e4b44900680d0975617a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5e6cf1b2131f9b14788b8ca08120a004, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -58,11 +58,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 41a39a165adb7a74190f2fe6b7c33852, type: 3}
+        m_Texture: {fileID: 2800000, guid: 35c3ec3e3d60fdd4ab00c7972c6dcc09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 6960f23ef8235594ea8ac1353864482f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 15aac34db0aefdd4d90bf5d4e54a255a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
