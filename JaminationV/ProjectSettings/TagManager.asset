@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - slowRange
+  - Undefined
+  - bullet
   layers:
   - Default
   - TransparentFX

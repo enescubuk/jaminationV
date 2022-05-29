@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float fallowRange;
     public float hitRange;
     public float enemyDamage;
+    public int playerHeal;
 
 
     int counter = 0;
@@ -28,6 +29,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(playerHeal);
         if (Vector3.Distance(transform.position,humanPlayer.transform.position) <= fallowRange)
         {
             if (Vector3.Distance(transform.position,humanPlayer.transform.position) >= hitRange)
@@ -39,7 +41,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                
+                playerHeal -= 1;
                 Debug.Log("saldiriyor");
                 enemyAnim.SetBool("enemywalk",false);
                 enemyAnim.SetTrigger("enemyhit");
