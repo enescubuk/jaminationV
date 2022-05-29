@@ -34,9 +34,13 @@ public class wolfControl : MonoBehaviour
         Vector3 upMovement = forward * speed * Time.deltaTime * Input.GetAxis("Vertical");
 
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-        transform.forward = heading;
+
+        transform.forward = new Vector3(heading.x,heading.y, heading.z);
+        transform.eulerAngles += new Vector3(0,90,0);
+       // transform.forward = new Vector3(heading.x,heading.y + 90 , heading.z);
         transform.position += rightMovement;
         transform.position += upMovement;
+        
     }
 
     void animationController()

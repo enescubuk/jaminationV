@@ -29,30 +29,30 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playerHeal);
         if (Vector3.Distance(transform.position,humanPlayer.transform.position) <= fallowRange)
         {
             if (Vector3.Distance(transform.position,humanPlayer.transform.position) >= hitRange)
             {
                 fallowPlayer();
-                Debug.Log("ustune kosuyor");
+                //Debug.Log("ustune kosuyor");
+                transform.LookAt(humanPlayer.transform);
                 enemyAnim.SetBool("enemywalk",true);
                 
             }
             else
             {
                 playerHeal -= 1;
-                Debug.Log("saldiriyor");
+                //Debug.Log("saldiriyor");
                 enemyAnim.SetBool("enemywalk",false);
                 enemyAnim.SetTrigger("enemyhit");
-                Debug.Log("zinkkk");
+                //Debug.Log("zinkkk");
                 
             }
             
         }
         else
         {
-            Debug.Log("kosmuyor");
+            //Debug.Log("kosmuyor");
             enemyAnim.SetBool("enemywalk",false);
         }
     }
@@ -82,6 +82,6 @@ public class EnemyAI : MonoBehaviour
 
     public void damage()
     {
-
+        Debug.Log("geyik saldirdi");
     }
 }

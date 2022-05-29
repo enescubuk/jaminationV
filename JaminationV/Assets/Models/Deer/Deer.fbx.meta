@@ -2,10 +2,7 @@ fileFormatVersion: 2
 guid: cc712bf200c69d742a9b85505587bd48
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 6855592851363092737
-    second: horse_rig|horse_rig_Walk
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
