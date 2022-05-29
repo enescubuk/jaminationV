@@ -9,7 +9,7 @@ public class PlayerGun : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float firingSpeed;
     private float lastShotTime = 0;
-    
+    public GameObject sliderCanvas;
     public static PlayerGun Instance;
     public Slider reloadSlider;
     private float totalTime=0;
@@ -35,6 +35,7 @@ public class PlayerGun : MonoBehaviour
             reloadControl = false;
             reloadSlider.value = reloadSlider.minValue;
             Debug.Log("sıfırlandı");
+            sliderCanvas.SetActive(false);
         }
     }
 
@@ -42,11 +43,13 @@ public class PlayerGun : MonoBehaviour
     {
         if (reloadControl == false)
         {
+            
             if (lastShotTime + firingSpeed <= Time.time)
             {
                 lastShotTime = Time.time;
                 Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
                 reloadControl = true;
+                sliderCanvas.SetActive(true);
             }
         }
        

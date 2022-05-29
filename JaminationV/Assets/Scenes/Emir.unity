@@ -690,6 +690,7 @@ MonoBehaviour:
   firingPoint: {fileID: 1683510974}
   projectilePrefab: {fileID: 2523497661429918614, guid: ad069783784a8aa40bc91680d9e30f31, type: 3}
   firingSpeed: 0.5
+  sliderCanvas: {fileID: 1668898913}
   reloadSlider: {fileID: 2077251999}
 --- !u!65 &708250487
 BoxCollider:
@@ -1532,6 +1533,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1668898913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775709906932188320, guid: bad869eb50b3bd54d87c3c94bcbdfb4d, type: 3}
+  m_PrefabInstance: {fileID: 8775709906527963889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683510973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1814,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8775709906932188320, guid: bad869eb50b3bd54d87c3c94bcbdfb4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8775709907975908984, guid: bad869eb50b3bd54d87c3c94bcbdfb4d, type: 3}
       propertyPath: m_Name
       value: ReloadBar
@@ -1858,7 +1868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8775709908193067594, guid: bad869eb50b3bd54d87c3c94bcbdfb4d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad869eb50b3bd54d87c3c94bcbdfb4d, type: 3}
