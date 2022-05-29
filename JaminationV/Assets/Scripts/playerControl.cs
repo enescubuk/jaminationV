@@ -10,8 +10,10 @@ public class playerControl : MonoBehaviour
     private Vector3 forward;
     private Vector3 right;
     private Animator playerAnim;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         _collider = GetComponent<BoxCollider>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
@@ -74,6 +76,7 @@ public class playerControl : MonoBehaviour
             isWalk = true;
         }
         playerAnim.SetBool("humanWalk",isWalk);
+        audioSource.enabled = isWalk;
     }
 
     void HandleShootInput()

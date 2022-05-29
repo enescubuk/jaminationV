@@ -26,10 +26,11 @@ public class slowMech : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             wolfSlow();
+            GameObject.Find("soundController").GetComponent<sescode>().playSoundWolf();
         }
     }
 
-    void wolfSlow()
+    public void wolfSlow()
     {
         circle.transform.localScale = new Vector2(slowRange,slowRange);
         StartCoroutine(coolDown());

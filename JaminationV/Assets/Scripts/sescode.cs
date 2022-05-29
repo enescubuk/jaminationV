@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class sescode : MonoBehaviour
 {
-    AudioSource SesKaynak;
+    public AudioSource SesKaynak;
     public AudioClip kurtSesi;
     void Start()
     {
         SesKaynak = gameObject.GetComponent<AudioSource>();
-        Invoke("KurtSesiOynat", 5.0f);
-        
     }
-
- 
-    void KurtSesiOynat()
+    public void playSoundWolf()
     {
         SesKaynak.PlayOneShot(kurtSesi); 
     }
