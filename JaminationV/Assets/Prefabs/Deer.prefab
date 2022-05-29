@@ -1540,6 +1540,7 @@ GameObject:
   - component: {fileID: 288187933750838045}
   - component: {fileID: 288187933750838043}
   - component: {fileID: 288187933750838042}
+  - component: {fileID: 1880868228}
   m_Layer: 0
   m_Name: Deer
   m_TagString: Untagged
@@ -1624,12 +1625,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5867088c890b674cb7cd55bbf569d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0.82
+  enemySpeed: 0.4
   enemySlowDuration: 5
   fallowRange: 10
   hitRange: 2.5
   enemyDamage: 0
   playerHeal: 0
+--- !u!65 &1880868228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098509662890889352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6754292, z: 2.1886077}
+  m_Center: {x: 0, y: 0.8712061, z: 0.4195087}
 --- !u!1 &1142148630184646356
 GameObject:
   m_ObjectHideFlags: 0

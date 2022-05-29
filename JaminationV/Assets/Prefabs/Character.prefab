@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firingPoint: {fileID: 4125016163435487782}
-  projectilePrefab: {fileID: 996031892925593023, guid: 9bf46a36b979e8744b5e4abce8145359, type: 3}
+  projectilePrefab: {fileID: 2523497661429918614, guid: ad069783784a8aa40bc91680d9e30f31, type: 3}
   firingSpeed: 0.5
   sliderCanvas: {fileID: 0}
   reloadSlider: {fileID: 0}
