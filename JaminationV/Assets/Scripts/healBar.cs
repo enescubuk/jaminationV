@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class healBar : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class healBar : MonoBehaviour
     private void Start()
     {
         _enemyAI.playerHeal = 3;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -47,6 +49,12 @@ public class healBar : MonoBehaviour
             eskimo1.SetActive(false);
             eskimo2.SetActive(false);
             eskimo3.SetActive(false);
+            Debug.Log("adam öldü");
+            Time.timeScale = 0;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 }

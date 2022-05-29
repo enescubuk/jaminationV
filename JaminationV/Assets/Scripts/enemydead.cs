@@ -11,13 +11,17 @@ public class enemydead : MonoBehaviour
     {
         if (other.gameObject.tag =="bullet")
         {
+            Debug.Log("1");
             if (enemy1Heal>0)
             {
+                Debug.Log("2");
                 enemy1Heal -= 1;
             }
             else
             {
+                Debug.Log("3");
                 Debug.Log("öldü");
+                Destroy(this.gameObject);
                 Debug.Log(enemy1Heal);
             }
             
