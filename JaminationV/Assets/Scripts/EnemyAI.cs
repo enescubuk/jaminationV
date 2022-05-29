@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float fallowRange;
     public float hitRange;
     public float enemyDamage;
-    public int playerHeal;
+    public int playerHeal = 3;
 
 
     int counter = 0;
@@ -41,7 +41,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                playerHeal -= 1;
+                
                 //Debug.Log("saldiriyor");
                 enemyAnim.SetBool("enemywalk",false);
                 enemyAnim.SetTrigger("enemyhit");
@@ -83,5 +83,6 @@ public class EnemyAI : MonoBehaviour
     public void damage()
     {
         Debug.Log("geyik saldirdi");
+        playerHeal -= 1;
     }
 }
